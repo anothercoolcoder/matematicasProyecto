@@ -28,369 +28,489 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            pictureBox1 = new PictureBox();
-            AlarmaSonoraON = new PictureBox();
-            AlarmaSonoraOFF = new PictureBox();
-            HorarioDiurno = new PictureBox();
-            HorarioNocturno = new PictureBox();
-            pictureBox6 = new PictureBox();
-            pictureBox7 = new PictureBox();
-            BovedaOpen = new PictureBox();
-            pictureBox9 = new PictureBox();
-            pictureBox10 = new PictureBox();
-            LaserOpen = new PictureBox();
-            pictureBox12 = new PictureBox();
-            pictureBox13 = new PictureBox();
-            LaserClose = new PictureBox();
-            pictureBox15 = new PictureBox();
-            pictureBox16 = new PictureBox();
-            BovedaClose = new PictureBox();
-            pictureBox18 = new PictureBox();
-            pictureBox19 = new PictureBox();
-            pictureBox21 = new PictureBox();
-            pictureBox22 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)AlarmaSonoraON).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)AlarmaSonoraOFF).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)HorarioDiurno).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)HorarioNocturno).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)BovedaOpen).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)LaserOpen).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)LaserClose).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)BovedaClose).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
+            pictureBoxEscena = new PictureBox();
+            pictureBoxSonora1 = new PictureBox();
+            pictureBoxSonora0 = new PictureBox();
+            pictureBoxHorario0 = new PictureBox();
+            pictureBoxHorario1 = new PictureBox();
+            pictureBoxSilenciosa0 = new PictureBox();
+            pictureBoxSilenciosa1 = new PictureBox();
+            pictureBoxBoveda1 = new PictureBox();
+            pictureBoxMovimiento0 = new PictureBox();
+            pictureBoxMovimiento1 = new PictureBox();
+            pictureBoxLaser0 = new PictureBox();
+            pictureBoxPanico0 = new PictureBox();
+            pictureBoxPanico1 = new PictureBox();
+            pictureBoxLaser1 = new PictureBox();
+            pictureBoxCredencial1 = new PictureBox();
+            pictureBoxCredencial0 = new PictureBox();
+            pictureBoxBoveda0 = new PictureBox();
+            pictureBoxCentral0 = new PictureBox();
+            pictureBoxCentral1 = new PictureBox();
+            pictureBoxBloqueo0 = new PictureBox();
+            pictureBoxBloqueo1 = new PictureBox();
+            pictureBoxMovimiento = new PictureBox();
+            pictureBoxBoveda = new PictureBox();
+            pictureBoxPanico = new PictureBox();
+            pictureBoxLaser = new PictureBox();
+            pictureBoxHorario = new PictureBox();
+            pictureBoxCredencial = new PictureBox();
+            pictureBoxSonora = new PictureBox();
+            pictureBoxSilenciosa = new PictureBox();
+            pictureBoxCentral = new PictureBox();
+            pictureBoxBloqueo = new PictureBox();
+            timer1 = new System.Windows.Forms.Timer(components);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxEscena).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSonora1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSonora0).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxHorario0).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxHorario1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSilenciosa0).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSilenciosa1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBoveda1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMovimiento0).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMovimiento1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLaser0).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPanico0).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPanico1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLaser1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCredencial1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCredencial0).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBoveda0).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCentral0).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCentral1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBloqueo0).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBloqueo1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMovimiento).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBoveda).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPanico).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLaser).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxHorario).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCredencial).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSonora).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSilenciosa).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCentral).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBloqueo).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // pictureBoxEscena
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(10, -2);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(633, 564);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            pictureBoxEscena.Image = (Image)resources.GetObject("pictureBoxEscena.Image");
+            pictureBoxEscena.Location = new Point(11, -3);
+            pictureBoxEscena.Name = "pictureBoxEscena";
+            pictureBoxEscena.Size = new Size(723, 714);
+            pictureBoxEscena.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxEscena.TabIndex = 0;
+            pictureBoxEscena.TabStop = false;
             // 
-            // AlarmaSonoraON
+            // pictureBoxSonora1
             // 
-            AlarmaSonoraON.Image = (Image)resources.GetObject("AlarmaSonoraON.Image");
-            AlarmaSonoraON.Location = new Point(676, 25);
-            AlarmaSonoraON.Margin = new Padding(3, 2, 3, 2);
-            AlarmaSonoraON.Name = "AlarmaSonoraON";
-            AlarmaSonoraON.Size = new Size(67, 56);
-            AlarmaSonoraON.SizeMode = PictureBoxSizeMode.Zoom;
-            AlarmaSonoraON.TabIndex = 1;
-            AlarmaSonoraON.TabStop = false;
+            pictureBoxSonora1.Image = (Image)resources.GetObject("pictureBoxSonora1.Image");
+            pictureBoxSonora1.Location = new Point(773, 32);
+            pictureBoxSonora1.Name = "pictureBoxSonora1";
+            pictureBoxSonora1.Size = new Size(77, 71);
+            pictureBoxSonora1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxSonora1.TabIndex = 1;
+            pictureBoxSonora1.TabStop = false;
             // 
-            // AlarmaSonoraOFF
+            // pictureBoxSonora0
             // 
-            AlarmaSonoraOFF.Image = (Image)resources.GetObject("AlarmaSonoraOFF.Image");
-            AlarmaSonoraOFF.Location = new Point(780, 25);
-            AlarmaSonoraOFF.Margin = new Padding(3, 2, 3, 2);
-            AlarmaSonoraOFF.Name = "AlarmaSonoraOFF";
-            AlarmaSonoraOFF.Size = new Size(67, 56);
-            AlarmaSonoraOFF.SizeMode = PictureBoxSizeMode.Zoom;
-            AlarmaSonoraOFF.TabIndex = 2;
-            AlarmaSonoraOFF.TabStop = false;
+            pictureBoxSonora0.Image = (Image)resources.GetObject("pictureBoxSonora0.Image");
+            pictureBoxSonora0.Location = new Point(856, 32);
+            pictureBoxSonora0.Name = "pictureBoxSonora0";
+            pictureBoxSonora0.Size = new Size(77, 71);
+            pictureBoxSonora0.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxSonora0.TabIndex = 2;
+            pictureBoxSonora0.TabStop = false;
             // 
-            // HorarioDiurno
+            // pictureBoxHorario0
             // 
-            HorarioDiurno.Image = (Image)resources.GetObject("HorarioDiurno.Image");
-            HorarioDiurno.Location = new Point(888, 25);
-            HorarioDiurno.Margin = new Padding(3, 2, 3, 2);
-            HorarioDiurno.Name = "HorarioDiurno";
-            HorarioDiurno.Size = new Size(67, 56);
-            HorarioDiurno.SizeMode = PictureBoxSizeMode.Zoom;
-            HorarioDiurno.TabIndex = 3;
-            HorarioDiurno.TabStop = false;
-            HorarioDiurno.Click += HorarioDiurno_Click;
+            pictureBoxHorario0.Image = (Image)resources.GetObject("pictureBoxHorario0.Image");
+            pictureBoxHorario0.Location = new Point(939, 32);
+            pictureBoxHorario0.Name = "pictureBoxHorario0";
+            pictureBoxHorario0.Size = new Size(77, 71);
+            pictureBoxHorario0.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxHorario0.TabIndex = 3;
+            pictureBoxHorario0.TabStop = false;
             // 
-            // HorarioNocturno
+            // pictureBoxHorario1
             // 
-            HorarioNocturno.Image = (Image)resources.GetObject("HorarioNocturno.Image");
-            HorarioNocturno.Location = new Point(888, 93);
-            HorarioNocturno.Margin = new Padding(3, 2, 3, 2);
-            HorarioNocturno.Name = "HorarioNocturno";
-            HorarioNocturno.Size = new Size(67, 56);
-            HorarioNocturno.SizeMode = PictureBoxSizeMode.Zoom;
-            HorarioNocturno.TabIndex = 6;
-            HorarioNocturno.TabStop = false;
-            HorarioNocturno.Click += HorarioNocturno_Click;
+            pictureBoxHorario1.Image = (Image)resources.GetObject("pictureBoxHorario1.Image");
+            pictureBoxHorario1.Location = new Point(939, 118);
+            pictureBoxHorario1.Name = "pictureBoxHorario1";
+            pictureBoxHorario1.Size = new Size(77, 71);
+            pictureBoxHorario1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxHorario1.TabIndex = 6;
+            pictureBoxHorario1.TabStop = false;
             // 
-            // pictureBox6
+            // pictureBoxSilenciosa0
             // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(780, 93);
-            pictureBox6.Margin = new Padding(3, 2, 3, 2);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(67, 56);
-            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox6.TabIndex = 5;
-            pictureBox6.TabStop = false;
+            pictureBoxSilenciosa0.Image = (Image)resources.GetObject("pictureBoxSilenciosa0.Image");
+            pictureBoxSilenciosa0.Location = new Point(856, 118);
+            pictureBoxSilenciosa0.Name = "pictureBoxSilenciosa0";
+            pictureBoxSilenciosa0.Size = new Size(77, 71);
+            pictureBoxSilenciosa0.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxSilenciosa0.TabIndex = 5;
+            pictureBoxSilenciosa0.TabStop = false;
             // 
-            // pictureBox7
+            // pictureBoxSilenciosa1
             // 
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(676, 93);
-            pictureBox7.Margin = new Padding(3, 2, 3, 2);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(67, 56);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox7.TabIndex = 4;
-            pictureBox7.TabStop = false;
+            pictureBoxSilenciosa1.Image = (Image)resources.GetObject("pictureBoxSilenciosa1.Image");
+            pictureBoxSilenciosa1.Location = new Point(773, 118);
+            pictureBoxSilenciosa1.Name = "pictureBoxSilenciosa1";
+            pictureBoxSilenciosa1.Size = new Size(77, 71);
+            pictureBoxSilenciosa1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxSilenciosa1.TabIndex = 4;
+            pictureBoxSilenciosa1.TabStop = false;
             // 
-            // BovedaOpen
+            // pictureBoxBoveda1
             // 
-            BovedaOpen.Image = (Image)resources.GetObject("BovedaOpen.Image");
-            BovedaOpen.Location = new Point(888, 154);
-            BovedaOpen.Margin = new Padding(3, 2, 3, 2);
-            BovedaOpen.Name = "BovedaOpen";
-            BovedaOpen.Size = new Size(67, 56);
-            BovedaOpen.SizeMode = PictureBoxSizeMode.Zoom;
-            BovedaOpen.TabIndex = 9;
-            BovedaOpen.TabStop = false;
-            BovedaOpen.Click += BovedaOpen_Click;
+            pictureBoxBoveda1.Image = (Image)resources.GetObject("pictureBoxBoveda1.Image");
+            pictureBoxBoveda1.Location = new Point(939, 195);
+            pictureBoxBoveda1.Name = "pictureBoxBoveda1";
+            pictureBoxBoveda1.Size = new Size(77, 71);
+            pictureBoxBoveda1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxBoveda1.TabIndex = 9;
+            pictureBoxBoveda1.TabStop = false;
             // 
-            // pictureBox9
+            // pictureBoxMovimiento0
             // 
-            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(780, 154);
-            pictureBox9.Margin = new Padding(3, 2, 3, 2);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(67, 56);
-            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox9.TabIndex = 8;
-            pictureBox9.TabStop = false;
-            pictureBox9.Click += pictureBox9_Click;
+            pictureBoxMovimiento0.Image = (Image)resources.GetObject("pictureBoxMovimiento0.Image");
+            pictureBoxMovimiento0.Location = new Point(856, 195);
+            pictureBoxMovimiento0.Name = "pictureBoxMovimiento0";
+            pictureBoxMovimiento0.Size = new Size(77, 71);
+            pictureBoxMovimiento0.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxMovimiento0.TabIndex = 8;
+            pictureBoxMovimiento0.TabStop = false;
             // 
-            // pictureBox10
+            // pictureBoxMovimiento1
             // 
-            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(676, 154);
-            pictureBox10.Margin = new Padding(3, 2, 3, 2);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(67, 56);
-            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox10.TabIndex = 7;
-            pictureBox10.TabStop = false;
-            pictureBox10.Click += pictureBox10_Click;
+            pictureBoxMovimiento1.Image = (Image)resources.GetObject("pictureBoxMovimiento1.Image");
+            pictureBoxMovimiento1.Location = new Point(773, 195);
+            pictureBoxMovimiento1.Name = "pictureBoxMovimiento1";
+            pictureBoxMovimiento1.Size = new Size(77, 71);
+            pictureBoxMovimiento1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxMovimiento1.TabIndex = 7;
+            pictureBoxMovimiento1.TabStop = false;
             // 
-            // LaserOpen
+            // pictureBoxLaser0
             // 
-            LaserOpen.Image = (Image)resources.GetObject("LaserOpen.Image");
-            LaserOpen.Location = new Point(888, 343);
-            LaserOpen.Margin = new Padding(3, 2, 3, 2);
-            LaserOpen.Name = "LaserOpen";
-            LaserOpen.Size = new Size(67, 56);
-            LaserOpen.SizeMode = PictureBoxSizeMode.Zoom;
-            LaserOpen.TabIndex = 18;
-            LaserOpen.TabStop = false;
-            LaserOpen.Click += LaserOpen_Click;
+            pictureBoxLaser0.Image = (Image)resources.GetObject("pictureBoxLaser0.Image");
+            pictureBoxLaser0.Location = new Point(939, 434);
+            pictureBoxLaser0.Name = "pictureBoxLaser0";
+            pictureBoxLaser0.Size = new Size(77, 71);
+            pictureBoxLaser0.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxLaser0.TabIndex = 18;
+            pictureBoxLaser0.TabStop = false;
             // 
-            // pictureBox12
+            // pictureBoxPanico0
             // 
-            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
-            pictureBox12.Location = new Point(780, 343);
-            pictureBox12.Margin = new Padding(3, 2, 3, 2);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(67, 56);
-            pictureBox12.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox12.TabIndex = 17;
-            pictureBox12.TabStop = false;
-            pictureBox12.Click += pictureBox12_Click;
+            pictureBoxPanico0.Image = (Image)resources.GetObject("pictureBoxPanico0.Image");
+            pictureBoxPanico0.Location = new Point(856, 434);
+            pictureBoxPanico0.Name = "pictureBoxPanico0";
+            pictureBoxPanico0.Size = new Size(77, 71);
+            pictureBoxPanico0.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxPanico0.TabIndex = 17;
+            pictureBoxPanico0.TabStop = false;
             // 
-            // pictureBox13
+            // pictureBoxPanico1
             // 
-            pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(676, 343);
-            pictureBox13.Margin = new Padding(3, 2, 3, 2);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(67, 56);
-            pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox13.TabIndex = 16;
-            pictureBox13.TabStop = false;
-            pictureBox13.Click += pictureBox13_Click;
+            pictureBoxPanico1.Image = (Image)resources.GetObject("pictureBoxPanico1.Image");
+            pictureBoxPanico1.Location = new Point(773, 434);
+            pictureBoxPanico1.Name = "pictureBoxPanico1";
+            pictureBoxPanico1.Size = new Size(77, 71);
+            pictureBoxPanico1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxPanico1.TabIndex = 16;
+            pictureBoxPanico1.TabStop = false;
             // 
-            // LaserClose
+            // pictureBoxLaser1
             // 
-            LaserClose.Image = (Image)resources.GetObject("LaserClose.Image");
-            LaserClose.Location = new Point(888, 283);
-            LaserClose.Margin = new Padding(3, 2, 3, 2);
-            LaserClose.Name = "LaserClose";
-            LaserClose.Size = new Size(67, 56);
-            LaserClose.SizeMode = PictureBoxSizeMode.Zoom;
-            LaserClose.TabIndex = 15;
-            LaserClose.TabStop = false;
-            LaserClose.Click += LaserClose_Click;
+            pictureBoxLaser1.Image = (Image)resources.GetObject("pictureBoxLaser1.Image");
+            pictureBoxLaser1.Location = new Point(939, 358);
+            pictureBoxLaser1.Name = "pictureBoxLaser1";
+            pictureBoxLaser1.Size = new Size(77, 71);
+            pictureBoxLaser1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxLaser1.TabIndex = 15;
+            pictureBoxLaser1.TabStop = false;
             // 
-            // pictureBox15
+            // pictureBoxCredencial1
             // 
-            pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
-            pictureBox15.Location = new Point(780, 283);
-            pictureBox15.Margin = new Padding(3, 2, 3, 2);
-            pictureBox15.Name = "pictureBox15";
-            pictureBox15.Size = new Size(67, 56);
-            pictureBox15.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox15.TabIndex = 14;
-            pictureBox15.TabStop = false;
-            pictureBox15.Click += pictureBox15_Click;
+            pictureBoxCredencial1.Image = (Image)resources.GetObject("pictureBoxCredencial1.Image");
+            pictureBoxCredencial1.Location = new Point(856, 358);
+            pictureBoxCredencial1.Name = "pictureBoxCredencial1";
+            pictureBoxCredencial1.Size = new Size(77, 71);
+            pictureBoxCredencial1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxCredencial1.TabIndex = 14;
+            pictureBoxCredencial1.TabStop = false;
             // 
-            // pictureBox16
+            // pictureBoxCredencial0
             // 
-            pictureBox16.Image = (Image)resources.GetObject("pictureBox16.Image");
-            pictureBox16.Location = new Point(676, 283);
-            pictureBox16.Margin = new Padding(3, 2, 3, 2);
-            pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(67, 56);
-            pictureBox16.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox16.TabIndex = 13;
-            pictureBox16.TabStop = false;
-            pictureBox16.Click += pictureBox16_Click;
+            pictureBoxCredencial0.Image = (Image)resources.GetObject("pictureBoxCredencial0.Image");
+            pictureBoxCredencial0.Location = new Point(773, 358);
+            pictureBoxCredencial0.Name = "pictureBoxCredencial0";
+            pictureBoxCredencial0.Size = new Size(77, 71);
+            pictureBoxCredencial0.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxCredencial0.TabIndex = 13;
+            pictureBoxCredencial0.TabStop = false;
             // 
-            // BovedaClose
+            // pictureBoxBoveda0
             // 
-            BovedaClose.Image = (Image)resources.GetObject("BovedaClose.Image");
-            BovedaClose.Location = new Point(888, 215);
-            BovedaClose.Margin = new Padding(3, 2, 3, 2);
-            BovedaClose.Name = "BovedaClose";
-            BovedaClose.Size = new Size(67, 56);
-            BovedaClose.SizeMode = PictureBoxSizeMode.Zoom;
-            BovedaClose.TabIndex = 12;
-            BovedaClose.TabStop = false;
-            BovedaClose.Click += BovedaClose_Click;
+            pictureBoxBoveda0.Image = (Image)resources.GetObject("pictureBoxBoveda0.Image");
+            pictureBoxBoveda0.Location = new Point(939, 272);
+            pictureBoxBoveda0.Name = "pictureBoxBoveda0";
+            pictureBoxBoveda0.Size = new Size(77, 71);
+            pictureBoxBoveda0.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxBoveda0.TabIndex = 12;
+            pictureBoxBoveda0.TabStop = false;
             // 
-            // pictureBox18
+            // pictureBoxCentral0
             // 
-            pictureBox18.Image = (Image)resources.GetObject("pictureBox18.Image");
-            pictureBox18.Location = new Point(780, 215);
-            pictureBox18.Margin = new Padding(3, 2, 3, 2);
-            pictureBox18.Name = "pictureBox18";
-            pictureBox18.Size = new Size(67, 56);
-            pictureBox18.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox18.TabIndex = 11;
-            pictureBox18.TabStop = false;
+            pictureBoxCentral0.Image = (Image)resources.GetObject("pictureBoxCentral0.Image");
+            pictureBoxCentral0.Location = new Point(856, 272);
+            pictureBoxCentral0.Name = "pictureBoxCentral0";
+            pictureBoxCentral0.Size = new Size(77, 71);
+            pictureBoxCentral0.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxCentral0.TabIndex = 11;
+            pictureBoxCentral0.TabStop = false;
             // 
-            // pictureBox19
+            // pictureBoxCentral1
             // 
-            pictureBox19.Image = (Image)resources.GetObject("pictureBox19.Image");
-            pictureBox19.Location = new Point(676, 215);
-            pictureBox19.Margin = new Padding(3, 2, 3, 2);
-            pictureBox19.Name = "pictureBox19";
-            pictureBox19.Size = new Size(67, 56);
-            pictureBox19.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox19.TabIndex = 10;
-            pictureBox19.TabStop = false;
+            pictureBoxCentral1.Image = (Image)resources.GetObject("pictureBoxCentral1.Image");
+            pictureBoxCentral1.Location = new Point(773, 272);
+            pictureBoxCentral1.Name = "pictureBoxCentral1";
+            pictureBoxCentral1.Size = new Size(77, 71);
+            pictureBoxCentral1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxCentral1.TabIndex = 10;
+            pictureBoxCentral1.TabStop = false;
             // 
-            // pictureBox21
+            // pictureBoxBloqueo0
             // 
-            pictureBox21.Image = (Image)resources.GetObject("pictureBox21.Image");
-            pictureBox21.Location = new Point(780, 404);
-            pictureBox21.Margin = new Padding(3, 2, 3, 2);
-            pictureBox21.Name = "pictureBox21";
-            pictureBox21.Size = new Size(67, 56);
-            pictureBox21.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox21.TabIndex = 20;
-            pictureBox21.TabStop = false;
+            pictureBoxBloqueo0.Image = (Image)resources.GetObject("pictureBoxBloqueo0.Image");
+            pictureBoxBloqueo0.Location = new Point(856, 512);
+            pictureBoxBloqueo0.Name = "pictureBoxBloqueo0";
+            pictureBoxBloqueo0.Size = new Size(77, 71);
+            pictureBoxBloqueo0.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxBloqueo0.TabIndex = 20;
+            pictureBoxBloqueo0.TabStop = false;
             // 
-            // pictureBox22
+            // pictureBoxBloqueo1
             // 
-            pictureBox22.Image = (Image)resources.GetObject("pictureBox22.Image");
-            pictureBox22.Location = new Point(676, 404);
-            pictureBox22.Margin = new Padding(3, 2, 3, 2);
-            pictureBox22.Name = "pictureBox22";
-            pictureBox22.Size = new Size(67, 56);
-            pictureBox22.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox22.TabIndex = 19;
-            pictureBox22.TabStop = false;
+            pictureBoxBloqueo1.Image = (Image)resources.GetObject("pictureBoxBloqueo1.Image");
+            pictureBoxBloqueo1.Location = new Point(773, 512);
+            pictureBoxBloqueo1.Name = "pictureBoxBloqueo1";
+            pictureBoxBloqueo1.Size = new Size(77, 71);
+            pictureBoxBloqueo1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxBloqueo1.TabIndex = 19;
+            pictureBoxBloqueo1.TabStop = false;
+            // 
+            // pictureBoxMovimiento
+            // 
+            pictureBoxMovimiento.Location = new Point(529, 108);
+            pictureBoxMovimiento.Name = "pictureBoxMovimiento";
+            pictureBoxMovimiento.Size = new Size(138, 116);
+            pictureBoxMovimiento.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxMovimiento.TabIndex = 21;
+            pictureBoxMovimiento.TabStop = false;
+            pictureBoxMovimiento.Click += pictureBoxMovimiento_Click;
+            // 
+            // pictureBoxBoveda
+            // 
+            pictureBoxBoveda.Location = new Point(90, 151);
+            pictureBoxBoveda.Name = "pictureBoxBoveda";
+            pictureBoxBoveda.Size = new Size(197, 167);
+            pictureBoxBoveda.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxBoveda.TabIndex = 22;
+            pictureBoxBoveda.TabStop = false;
+            pictureBoxBoveda.Click += pictureBoxBoveda_Click;
+            // 
+            // pictureBoxPanico
+            // 
+            pictureBoxPanico.Location = new Point(581, 420);
+            pictureBoxPanico.Name = "pictureBoxPanico";
+            pictureBoxPanico.Size = new Size(119, 118);
+            pictureBoxPanico.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxPanico.TabIndex = 24;
+            pictureBoxPanico.TabStop = false;
+            pictureBoxPanico.Click += pictureBoxPanico_Click;
+            // 
+            // pictureBoxLaser
+            // 
+            pictureBoxLaser.Location = new Point(320, 182);
+            pictureBoxLaser.Name = "pictureBoxLaser";
+            pictureBoxLaser.Size = new Size(143, 70);
+            pictureBoxLaser.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxLaser.TabIndex = 23;
+            pictureBoxLaser.TabStop = false;
+            pictureBoxLaser.Click += pictureBoxLaser_Click;
+            // 
+            // pictureBoxHorario
+            // 
+            pictureBoxHorario.Location = new Point(316, 441);
+            pictureBoxHorario.Name = "pictureBoxHorario";
+            pictureBoxHorario.Size = new Size(118, 99);
+            pictureBoxHorario.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxHorario.TabIndex = 26;
+            pictureBoxHorario.TabStop = false;
+            pictureBoxHorario.Click += pictureBoxHorario_Click;
+            // 
+            // pictureBoxCredencial
+            // 
+            pictureBoxCredencial.Location = new Point(92, 258);
+            pictureBoxCredencial.Name = "pictureBoxCredencial";
+            pictureBoxCredencial.Size = new Size(89, 85);
+            pictureBoxCredencial.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxCredencial.TabIndex = 25;
+            pictureBoxCredencial.TabStop = false;
+            pictureBoxCredencial.Click += pictureBoxCredencial_Click;
+            // 
+            // pictureBoxSonora
+            // 
+            pictureBoxSonora.Location = new Point(317, 53);
+            pictureBoxSonora.Name = "pictureBoxSonora";
+            pictureBoxSonora.Size = new Size(105, 91);
+            pictureBoxSonora.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxSonora.TabIndex = 27;
+            pictureBoxSonora.TabStop = false;
+            // 
+            // pictureBoxSilenciosa
+            // 
+            pictureBoxSilenciosa.Location = new Point(604, 252);
+            pictureBoxSilenciosa.Name = "pictureBoxSilenciosa";
+            pictureBoxSilenciosa.Size = new Size(81, 71);
+            pictureBoxSilenciosa.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxSilenciosa.TabIndex = 28;
+            pictureBoxSilenciosa.TabStop = false;
+            // 
+            // pictureBoxCentral
+            // 
+            pictureBoxCentral.Location = new Point(351, 295);
+            pictureBoxCentral.Name = "pictureBoxCentral";
+            pictureBoxCentral.Size = new Size(102, 95);
+            pictureBoxCentral.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxCentral.TabIndex = 30;
+            pictureBoxCentral.TabStop = false;
+            // 
+            // pictureBoxBloqueo
+            // 
+            pictureBoxBloqueo.Location = new Point(316, 546);
+            pictureBoxBloqueo.Name = "pictureBoxBloqueo";
+            pictureBoxBloqueo.Size = new Size(102, 100);
+            pictureBoxBloqueo.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxBloqueo.TabIndex = 29;
+            pictureBoxBloqueo.TabStop = false;
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Tick += timer1_Tick;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1028, 572);
-            Controls.Add(pictureBox21);
-            Controls.Add(pictureBox22);
-            Controls.Add(LaserOpen);
-            Controls.Add(pictureBox12);
-            Controls.Add(pictureBox13);
-            Controls.Add(LaserClose);
-            Controls.Add(pictureBox15);
-            Controls.Add(pictureBox16);
-            Controls.Add(BovedaClose);
-            Controls.Add(pictureBox18);
-            Controls.Add(pictureBox19);
-            Controls.Add(BovedaOpen);
-            Controls.Add(pictureBox9);
-            Controls.Add(pictureBox10);
-            Controls.Add(HorarioNocturno);
-            Controls.Add(pictureBox6);
-            Controls.Add(pictureBox7);
-            Controls.Add(HorarioDiurno);
-            Controls.Add(AlarmaSonoraOFF);
-            Controls.Add(AlarmaSonoraON);
-            Controls.Add(pictureBox1);
-            Margin = new Padding(3, 2, 3, 2);
+            ClientSize = new Size(1021, 725);
+            Controls.Add(pictureBoxCentral);
+            Controls.Add(pictureBoxBloqueo);
+            Controls.Add(pictureBoxSilenciosa);
+            Controls.Add(pictureBoxSonora);
+            Controls.Add(pictureBoxHorario);
+            Controls.Add(pictureBoxCredencial);
+            Controls.Add(pictureBoxPanico);
+            Controls.Add(pictureBoxLaser);
+            Controls.Add(pictureBoxBoveda);
+            Controls.Add(pictureBoxMovimiento);
+            Controls.Add(pictureBoxBloqueo0);
+            Controls.Add(pictureBoxBloqueo1);
+            Controls.Add(pictureBoxLaser0);
+            Controls.Add(pictureBoxPanico0);
+            Controls.Add(pictureBoxPanico1);
+            Controls.Add(pictureBoxLaser1);
+            Controls.Add(pictureBoxCredencial1);
+            Controls.Add(pictureBoxCredencial0);
+            Controls.Add(pictureBoxBoveda0);
+            Controls.Add(pictureBoxCentral0);
+            Controls.Add(pictureBoxCentral1);
+            Controls.Add(pictureBoxBoveda1);
+            Controls.Add(pictureBoxMovimiento0);
+            Controls.Add(pictureBoxMovimiento1);
+            Controls.Add(pictureBoxHorario1);
+            Controls.Add(pictureBoxSilenciosa0);
+            Controls.Add(pictureBoxSilenciosa1);
+            Controls.Add(pictureBoxHorario0);
+            Controls.Add(pictureBoxSonora0);
+            Controls.Add(pictureBoxSonora1);
+            Controls.Add(pictureBoxEscena);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)AlarmaSonoraON).EndInit();
-            ((System.ComponentModel.ISupportInitialize)AlarmaSonoraOFF).EndInit();
-            ((System.ComponentModel.ISupportInitialize)HorarioDiurno).EndInit();
-            ((System.ComponentModel.ISupportInitialize)HorarioNocturno).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)BovedaOpen).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            ((System.ComponentModel.ISupportInitialize)LaserOpen).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
-            ((System.ComponentModel.ISupportInitialize)LaserClose).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
-            ((System.ComponentModel.ISupportInitialize)BovedaClose).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxEscena).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSonora1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSonora0).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxHorario0).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxHorario1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSilenciosa0).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSilenciosa1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBoveda1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMovimiento0).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMovimiento1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLaser0).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPanico0).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPanico1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLaser1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCredencial1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCredencial0).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBoveda0).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCentral0).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCentral1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBloqueo0).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBloqueo1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMovimiento).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBoveda).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPanico).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLaser).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxHorario).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCredencial).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSonora).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxSilenciosa).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxCentral).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBloqueo).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private PictureBox AlarmaSonoraON;
-        private PictureBox AlarmaSonoraOFF;
-        private PictureBox HorarioDiurno;
-        private PictureBox HorarioNocturno;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox7;
-        private PictureBox BovedaOpen;
-        private PictureBox pictureBox9;
-        private PictureBox pictureBox10;
-        private PictureBox LaserOpen;
-        private PictureBox pictureBox12;
-        private PictureBox pictureBox13;
-        private PictureBox LaserClose;
-        private PictureBox pictureBox15;
-        private PictureBox pictureBox16;
-        private PictureBox BovedaClose;
-        private PictureBox pictureBox18;
-        private PictureBox pictureBox19;
-        private PictureBox pictureBox21;
-        private PictureBox pictureBox22;
+        private PictureBox pictureBoxEscena;
+        private PictureBox pictureBoxSonora1;
+        private PictureBox pictureBoxSonora0;
+        private PictureBox pictureBoxHorario0;
+        private PictureBox pictureBoxHorario1;
+        private PictureBox pictureBoxSilenciosa0;
+        private PictureBox pictureBoxSilenciosa1;
+        private PictureBox pictureBoxBoveda1;
+        private PictureBox pictureBoxMovimiento0;
+        private PictureBox pictureBoxMovimiento1;
+        private PictureBox pictureBoxLaser0;
+        private PictureBox pictureBoxPanico0;
+        private PictureBox pictureBoxPanico1;
+        private PictureBox pictureBoxLaser1;
+        private PictureBox pictureBoxCredencial1;
+        private PictureBox pictureBoxCredencial0;
+        private PictureBox pictureBoxBoveda0;
+        private PictureBox pictureBoxCentral0;
+        private PictureBox pictureBoxCentral1;
+        private PictureBox pictureBoxBloqueo0;
+        private PictureBox pictureBoxBloqueo1;
+        private PictureBox pictureBoxMovimiento;
+        private PictureBox pictureBoxBoveda;
+        private PictureBox pictureBoxPanico;
+        private PictureBox pictureBoxLaser;
+        private PictureBox pictureBoxHorario;
+        private PictureBox pictureBoxCredencial;
+        private PictureBox pictureBoxSonora;
+        private PictureBox pictureBoxSilenciosa;
+        private PictureBox pictureBoxCentral;
+        private PictureBox pictureBoxBloqueo;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -2,157 +2,95 @@ namespace TallerDiscretas
 {
     public partial class Form1 : Form
     {
-
-        private bool deteccionMovimiento = false;
-        private bool bovedaAbierta = false;
-        private bool barreraLaserInterrumpida = false;
-        private bool botonPanicoPresionado = false;
-        private bool esHorarioNocturno = false;
-        private bool credencialAutorizada = false;
-
-
-        private bool alarmaSonora = false;
-        private bool alarmaSilenciosa = false;
-        private bool bloqueoAccesos = false;
-        private bool alertaCentralSeguridad = false;
-
+        bool deteccionMovimiento = false;
+        bool bovedaAbierta = false;
+        bool barreraLaserInterrumpida = false;
+        bool botonPanicoPresionado = false;
+        bool esHorarioNocturno = false;
+        bool credencialAutorizada = false;
 
         public Form1()
         {
             InitializeComponent();
+
+            OnBankTransparent(pictureBoxMovimiento);
+            OnBankTransparent(pictureBoxBoveda);
+            OnBankTransparent(pictureBoxLaser);
+            OnBankTransparent(pictureBoxPanico);
+            OnBankTransparent(pictureBoxCredencial);
+            OnBankTransparent(pictureBoxHorario);
+            OnBankTransparent(pictureBoxSonora);
+            OnBankTransparent(pictureBoxSilenciosa);
+            OnBankTransparent(pictureBoxBloqueo);
+            OnBankTransparent(pictureBoxCentral);
         }
 
-
-
-        public bool EvaluarAlarmaSonora()
+        private void OnBankTransparent(PictureBox control)
         {
-            return (deteccionMovimiento && !credencialAutorizada) || (barreraLaserInterrumpida && esHorarioNocturno);
+            Point positionOnForm = control.Location;
+            control.Parent = pictureBoxEscena;
+            control.Location = new Point(positionOnForm.X - pictureBoxEscena.Left, positionOnForm.Y - pictureBoxEscena.Top);
+            control.BackColor = Color.Transparent;
+            control.BringToFront();
         }
 
-        public bool EvaluarAlarmaSilenciosa()
+        private void pictureBoxMovimiento_Click(object sender, EventArgs e)
         {
-            return !esHorarioNocturno && botonPanicoPresionado && bovedaAbierta;
-        }
-        public bool EvaluarBloqueoAccesos()
-        {
-            return (bovedaAbierta && !credencialAutorizada) || (barreraLaserInterrumpida && deteccionMovimiento);
+            deteccionMovimiento = !deteccionMovimiento;
         }
 
-        public bool EvaluarAlertaCentral()
+        private void pictureBoxBoveda_Click(object sender, EventArgs e)
         {
-            return (botonPanicoPresionado && esHorarioNocturno) || (bovedaAbierta && deteccionMovimiento && !credencialAutorizada);
+            bovedaAbierta = !bovedaAbierta;
+        }
+        private void pictureBoxLaser_Click(object sender, EventArgs e)
+        {
+            barreraLaserInterrumpida = !barreraLaserInterrumpida;
+        }
+        private void pictureBoxPanico_Click(object sender, EventArgs e)
+        {
+            botonPanicoPresionado = !botonPanicoPresionado;
+        }
+        private void pictureBoxCredencial_Click(object sender, EventArgs e)
+        {
+            credencialAutorizada = !credencialAutorizada;
+        }
+        private void pictureBoxHorario_Click(object sender, EventArgs e)
+        {
+            esHorarioNocturno = !esHorarioNocturno;
         }
 
-        private void VerificarEstadoSistema()
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            alarmaSonora = EvaluarAlarmaSonora();
-            alarmaSilenciosa = EvaluarAlarmaSilenciosa();
-            bloqueoAccesos = EvaluarBloqueoAccesos();
-            alertaCentralSeguridad = EvaluarAlertaCentral();
+            pictureBoxMovimiento.Image = deteccionMovimiento ? pictureBoxMovimiento1.Image : pictureBoxMovimiento0.Image;
+            pictureBoxBoveda.Image = bovedaAbierta ? pictureBoxBoveda1.Image : pictureBoxBoveda0.Image;
+            pictureBoxLaser.Image = barreraLaserInterrumpida ? pictureBoxLaser1.Image : pictureBoxLaser0.Image;
+            pictureBoxPanico.Image = botonPanicoPresionado ? pictureBoxPanico1.Image : pictureBoxPanico0.Image;
+            pictureBoxCredencial.Image = credencialAutorizada ? pictureBoxCredencial1.Image : pictureBoxCredencial0.Image;
+            pictureBoxHorario.Image = esHorarioNocturno ? pictureBoxHorario1.Image : pictureBoxHorario0.Image;
 
-            if (alarmaSonora)
-            {
-                MessageBox.Show("Se activó la alarma sonora");
-            }
+            bool alarmaSonora =        // S1 = A·F' + C·E
+                (deteccionMovimiento && !credencialAutorizada) ||
+                (barreraLaserInterrumpida && esHorarioNocturno);
 
-            if (alarmaSilenciosa)
-            {
-                MessageBox.Show("Se activó la alarma silenciosa");
-            }
+            bool alarmaSilenciosa =    // S2 = B·D·E'
+                bovedaAbierta && botonPanicoPresionado && !esHorarioNocturno;
 
-            if (bloqueoAccesos)
-            {
-                MessageBox.Show("Se activó el bloqueo automático de accesos");
-            }
+            bool bloqueoAccesos =      // S3 = B·F' + C·A
+                (bovedaAbierta && !credencialAutorizada) ||
+                (barreraLaserInterrumpida && deteccionMovimiento);
 
-            if (alertaCentralSeguridad)
-            {
-                MessageBox.Show("Se activó el envío de alerta a la central de seguridad o policía");
-            }
-        }
+            bool alertaCentral =       // S4 = D·E + A·B·F'
+                (botonPanicoPresionado && esHorarioNocturno) ||
+                (deteccionMovimiento && bovedaAbierta && !credencialAutorizada);
 
-        private void HorarioDiurno_Click(object sender, EventArgs e)
-        {
-            esHorarioNocturno = false;
-            MessageBox.Show("Horario: DIURNO");
-            VerificarEstadoSistema();
-        }
+            pictureBoxSonora.Image = alarmaSonora ? pictureBoxSonora1.Image : pictureBoxSonora0.Image;
+            pictureBoxSilenciosa.Image = alarmaSilenciosa ? pictureBoxSilenciosa1.Image : pictureBoxSilenciosa0.Image;
+            pictureBoxBloqueo.Image = bloqueoAccesos ? pictureBoxBloqueo1.Image : pictureBoxBloqueo0.Image;
+            pictureBoxCentral.Image = alertaCentral ? pictureBoxCentral1.Image : pictureBoxCentral0.Image;
 
-        private void HorarioNocturno_Click(object sender, EventArgs e)
-        {
-            esHorarioNocturno = true;
-            MessageBox.Show("Horario: NOCTURNO");
-            VerificarEstadoSistema();
-        }
-
-        private void BovedaOpen_Click(object sender, EventArgs e)
-        {
-            bovedaAbierta = true;
-            MessageBox.Show("Puerta de Boveda: ABIERTA");
-            VerificarEstadoSistema();
-        }
-
-        private void BovedaClose_Click(object sender, EventArgs e)
-        {
-            bovedaAbierta = false;
-            MessageBox.Show("Puerta de Boveda: CERRADA");
-            VerificarEstadoSistema();
-        }
-
-        private void LaserClose_Click(object sender, EventArgs e)
-        {
-            barreraLaserInterrumpida = true;
-            MessageBox.Show("Laser: INTERRUMPIDO");
-            VerificarEstadoSistema();
-        }
-
-        private void LaserOpen_Click(object sender, EventArgs e)
-        {
-            barreraLaserInterrumpida = false;
-            MessageBox.Show("Laser: NO INTERRUMPIDO");
-            VerificarEstadoSistema();
-        }
-
-        private void pictureBox13_Click(object sender, EventArgs e)
-        {
-            botonPanicoPresionado = true;
-            MessageBox.Show("Botón de Pánico: ON");
-            VerificarEstadoSistema();
-        }
-
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
-            botonPanicoPresionado = false;
-            MessageBox.Show("Botón de Pánico: OFF");
-            VerificarEstadoSistema();
-        }
-
-        private void pictureBox15_Click(object sender, EventArgs e)
-        {
-            credencialAutorizada = true;
-            MessageBox.Show("Credencial autorizada: ON");
-            VerificarEstadoSistema();
-        }
-
-        private void pictureBox16_Click(object sender, EventArgs e)
-        {
-            credencialAutorizada = false;
-            MessageBox.Show("Credencial autorizada: OFF");
-            VerificarEstadoSistema();
-        }
-
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-            deteccionMovimiento = true;
-            MessageBox.Show("Deteccion de movimiento: ON");
-            VerificarEstadoSistema();
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
-            deteccionMovimiento = false;
-            MessageBox.Show("Deteccion de movimiento: OFF");
-            VerificarEstadoSistema();
+            this.Text = $"S1={(alarmaSonora ? 1 : 0)}  S2={(alarmaSilenciosa ? 1 : 0)}  S3={(bloqueoAccesos ? 1 : 0)}  S4={(alertaCentral ? 1 : 0)}";
+            this.BackColor = alarmaSonora ? Color.IndianRed : Color.WhiteSmoke;
         }
     }
 }
